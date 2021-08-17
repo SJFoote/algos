@@ -85,3 +85,19 @@
 
 # print(factorial(8))
 
+# bubble sort practice
+def bubble(arr):
+    for i in range(0, len(arr)-1, 1):
+        # iterate through list, take current value and compare it to the rest of the list
+        for i in range(0, len(arr)-1, 1):
+            # store first value in comp, this is the comparison variable
+            if arr[i] > arr[i+1]:
+                temp = arr[i+1]
+                arr[i+1] = arr[i]
+                arr[i] = temp
+        print(arr)
+
+bubble([9, 4, 2, 10, 1, 2])
+
+# no use recursion to solve bubble sort!!!!
+
