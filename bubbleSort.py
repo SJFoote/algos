@@ -101,12 +101,31 @@
 
 # no use recursion to solve bubble sort!!!!
 
-def sum(n):
-    if n <= 1:
-        return n
-    print(n)
-    return n + sum(n-1)
+# def sum(n):
+#     if n <= 1:
+#         return n
+#     print(n)
+#     return n + sum(n-1)
 
-print(sum(5))
+# print(sum(3))
+
+# build a recursive function that takes an array and rearranges the numbers back to front
+
+def backToFront(arr):
+    # define variables needed to store values in function
+    newArr = []
+    #defines the base case for when new array is complete
+    if len(arr) == 0:
+        return newArr
+    # test to see that it is iterating through array
+    print(len(arr)-1)
+    #pops the last value in the array
+    arr.pop(arr[len(arr-1)])
+    #pushes popped value to new array
+    # newArr.append(arr[len(arr)])
+    return backToFront
     
+    
+backToFront([1,2,3,4,5])
+
 
