@@ -111,21 +111,79 @@
 
 # build a recursive function that takes an array and rearranges the numbers back to front
 
-def backToFront(arr):
-    # define variables needed to store values in function
-    newArr = []
-    #defines the base case for when new array is complete
-    if len(arr) == 0:
-        return newArr
-    # test to see that it is iterating through array
-    print(len(arr)-1)
-    #pops the last value in the array
-    arr.pop(arr[len(arr-1)])
-    #pushes popped value to new array
-    # newArr.append(arr[len(arr)])
-    return backToFront
+# def backToFront(arr):
+#     # define variables needed to store values in function
+#     newArr = []
+#     #defines the base case for when new array is complete
+#     if len(arr) == 0:
+#         return newArr
+#     # test to see that it is iterating through array
+#     print(len(arr)-1)
+#     #pops the last value in the array
+#     arr.pop(arr[len(arr-1)])
+#     #pushes popped value to new array
+#     # newArr.append(arr[len(arr)])
+#     return backToFront
     
     
-backToFront([1,2,3,4,5])
+# backToFront([1,2,3,4,5])
 
+# Linked List practice
+
+# class SLL:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+
+#     def  __repr__(self):
+#         self.head = None
+        
+
+# class LinkedList(self):
+#     def __init__(self):   
+#         self.head = None
+    
+#     def __repr__(self):
+#         node = self.head
+#         nodes = []
+#         while node is not None:
+#             nodes.append(node.data)
+#             node = node.next
+#         nodes.append("None")
+#         return " -> ".join(nodes)
+        
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def printList(self):
+        temp = self.head
+        while(temp):
+            print(temp.data)
+            temp = temp.next
+
+if __name__=='__main__':
+    llist = LinkedList()
+
+    llist.head = Node(1)
+    second = Node(2)
+    third =  Node(3)
+
+    llist.head.next = second;
+    second.next = third;
+
+list1 = Node(4)
+
+print(list1)
 
