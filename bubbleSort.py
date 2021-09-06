@@ -202,14 +202,24 @@ def swap(arr, a, b, i):
 #quick sort example
 arr = [50, 23, 9, 18, 61, 32]
 def quick(arr):
+    lst1 = []
+    lst2 = []
     pivot = arr[len(arr)-1]
-    for i in range(len(arr)-1):
+    for i in range(len(arr)):
         if arr[i] < pivot:
-            swap(arr, arr[i], pivot, i)
+            # swap(arr, arr[i], pivot, i)
             # pivot = arr[len(arr)-1]
             # temp = arr[i]
             # arr[i] = pivot
             # arr[len(arr)-1] = temp
+            lst1.append(arr[i])
+        elif arr[i] >= pivot:
+            lst2.append(arr[i])
+        print(lst1, lst2)
+    quick(lst1, lst2):
+        
     return arr
 
 print(quick(arr))
+
+
