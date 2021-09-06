@@ -137,3 +137,23 @@
 // 
 
 // **Problem Solving Patterns** \\
+// **FREQUENCY COUNTER** \\
+function freq(arr1, arr2) {
+    var count = 0
+    if (arr1.length !== arr2.length) {
+        return false
+    }
+
+    for (var i = 0; i < arr1.length; i++) {
+        let num = arr2.indexOf(arr1[i]**2)
+        console.log(arr2)
+        if (num == -1) {
+            return false;
+        }
+        console.log(arr2)
+        arr2.splice(num, 1)
+    }
+    return true;
+}
+
+console.log(freq([1,2,3],[1,4,9]))
