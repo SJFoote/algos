@@ -188,3 +188,20 @@
 # print(list1)
 
 
+#quick sort, merge sort, topological sort, counting sort
+def swap(a, b):
+    temp = a
+    a = b
+    b = temp
+
+#quick sort example
+arr = [50, 23, 9, 18, 61, 32]
+def quick(arr):
+    pivot = arr[len(arr)-1]
+    for i in range(len(arr)-1):
+        if arr[i] < pivot:
+            swap(arr[i],pivot)
+
+    return arr
+
+print(quick(arr))

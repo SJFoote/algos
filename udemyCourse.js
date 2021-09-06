@@ -112,13 +112,28 @@
 // talk about the steps you are going to take. throw in "hey do you think that will work", sometimes you can get a little hint.  Do not just start writing without talking through the problem.
 
 // write out skeleton of your function
-function charCount(str) {
-    // make object to return at end
-    // loop over string
-
-    // return object at end
-}
+// function charCount(str) {
+//     // make object to return at end
+//     var result = {};
+//     // loop over string
+//     for (var i=0; i < str.length; i++){
+//         var char = str[i].toLowerCase()
+//         if (result[char] > 0) {
+//             result[char]++;
+//         } 
+        
+//         else {
+//             result[char] = 1;
+//         };
+//     }
+//     // return object at end
+//     return result;
+// } 
 
 // **a lot of the time the problem you are tasked with solving isn't solvable in the given time, but they want to see the process and make sure you have a clear road map on how to get to the final result even if it isn't 100% correct.
+// console.log(charCount('Hi there!'))
 
+// #####################################################
+// 
 
+// **Problem Solving Patterns** \\
