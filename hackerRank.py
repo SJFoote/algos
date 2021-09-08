@@ -18,14 +18,25 @@
 # print(greaterThanSecond([2]))
 
 
-def printXtoY(x, y):
-    for i in range(x, y, 1):
-        print(i)
+# def printXtoY(x, y):
+#     for i in range(x, y, 1):
+#         print(i)
 
 
-printXtoY(1,10)
+# printXtoY(1,10)
 
-printXtoY(10,20)
+# printXtoY(10,20)
 
-printXtoY(-20,-10) 
+# printXtoY(-20,-10) 
 
+
+# def freq(string):
+#     values = []
+#     for i in range(0, len(string), 1):
+#         if string[i] in values:
+#             values += values
+#         else:
+#             values = 1
+#     return values
+
+# print(freq('hello hello'))

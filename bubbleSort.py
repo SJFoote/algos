@@ -192,34 +192,44 @@
 
 # ###################################################################################################################################################
 # A simple swap function to re-use! #
-def swap(arr, a, b, i):
-    b = arr[len(arr)-1]
-    temp = arr[i]
-    arr[i] = b
-    arr[len(arr)-1] = temp
-    return arr
+# def swap(arr, a, b, i):
+#     b = arr[len(arr)-1]
+#     temp = arr[i]
+#     arr[i] = b
+#     arr[len(arr)-1] = temp
+#     return arr
 
 #quick sort example
-arr = [50, 23, 9, 18, 61, 32]
-def quick(arr):
-    lst1 = []
-    lst2 = []
-    pivot = arr[len(arr)-1]
-    for i in range(len(arr)):
-        if arr[i] < pivot:
-            # swap(arr, arr[i], pivot, i)
-            # pivot = arr[len(arr)-1]
-            # temp = arr[i]
-            # arr[i] = pivot
-            # arr[len(arr)-1] = temp
-            lst1.append(arr[i])
-        elif arr[i] >= pivot:
-            lst2.append(arr[i])
-        print(lst1, lst2)
-    quick(lst1, lst2):
-        
-    return arr
+# arr = [50, 23, 9, 18, 61, 32]
+# def quick(arr):
+#     lst1 = []
+#     lst2 = []
+#     pivot = arr[len(arr)-1]
+#     for i in range(len(arr)):
+#         if arr[i] < pivot:
+#             # swap(arr, arr[i], pivot, i)
+#             # pivot = arr[len(arr)-1]
+#             # temp = arr[i]
+#             # arr[i] = pivot
+#             # arr[len(arr)-1] = temp
+#             lst1.append(arr[i])
+#         elif arr[i] >= pivot:
+#             lst2.append(arr[i])
+#         print(lst1, lst2)
+#     quick(lst1, lst2):
+#     return arr
 
-print(quick(arr))
+# print(quick(arr))
+
+def quickSort(arr, lft, rht):
+    if lft < rht:
+        partition_pos = partition(arr, lft, rht)
+        quickSort(arr, lft, partition_pos-1)
+        quickSort(arr, partition_pos+1, rht)
+
+def partition(arr, lft, rht):
+    i = lft
+    j = rht - 1
+    pivot = arr[rht]
 
 
