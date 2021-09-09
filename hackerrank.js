@@ -1,21 +1,20 @@
 // Advanced algos and data sctructures practice from hacker rank
 
 // given a number add the sum of positive values
-var num = 0;
 
 function sigma(n){
-    num = num + n;
-    if (n > 0){
-        sigma(n-1);
+    if ( n == 0){
+        return 0;
+    } else {
+        return n + sigma(n-1);
     }
-    return num;
 }    
 
 console.log(sigma(10))
 
 
 
-// console.log(sigma(3))
+// console.log(sigma(3))s
 
 // function countDown(fromNumber) {
 //     console.log(fromNumber);
