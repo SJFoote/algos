@@ -46,16 +46,16 @@
 // ****
 
 // Write a program that reverses a string using recursion. Given the string "freeCodeCamp" your program should return "pmaCedoCeerf".
-function reverse(str){
+// function reverse(str){
 
-    if (str.length == 0){
-        return str
-    } else {
-        return str[str.length-1] + reverse(str.substr(0, str.length-1))
-    }
-}
+//     if (str.length == 0){
+//         return str
+//     } else {
+//         return str[str.length-1] + reverse(str.substr(0, str.length-1))
+//     }
+// }
 
-console.log(reverse('freeCodeCamp'))
+// console.log(reverse('freeCodeCamp'))
 // console.log(reverse('freeCodeCamp'))
 
 // ****
@@ -64,3 +64,13 @@ console.log(reverse('freeCodeCamp'))
 // Given the string "JavaScript" and a character "a", your program should return 2.
 
 // Hint: Try to figure out when you want the function to stop calling itself and how to return a smaller version of the problem every time the function calls itself.
+
+function count(str) {
+    if (str.length == 0){
+        return str;
+    } else {
+        return str[str.length-1] + count(str.length-1);
+    }
+}
+
+console.log(count('freeCodeCamp'))
