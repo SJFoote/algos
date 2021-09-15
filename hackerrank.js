@@ -136,3 +136,20 @@
 //         return zib(2n+1) + zib(n-1)+1
 //     }
 // }
+
+// more practice!!
+function sum(n){
+    if (n == 0){
+        return 1;
+    }
+    else {
+    } return n + sum(n-1);
+}
+
+console.log(sum(5))
+// 5 + sum(5-1)
+// 4 + sum(4-1)
+// 3 + sum(3-1)
+// 2 + sum(2-1)
+// 1 + sum(1-1)
+// total == 15
