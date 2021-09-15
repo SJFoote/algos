@@ -118,6 +118,73 @@
 // console.log(sum(4))
 // console.log(sum(10))
 
+// more practice!!
+// function sum(n){
+//     if (n == 0){
+//         return 0;
+//     }
+//     else {
+//     } return n + sum(n-1);
+// }
+
+// console.log(sum(5))
+// 5 + sum(5-1)
+// 4 + sum(4-1)
+// 3 + sum(3-1)
+// 2 + sum(2-1)
+// 1 + sum(1-1)
+// total == 15
+
+// GRID PATHS
+// function grd(n, m){
+//     if (n == 1 || m == 1){
+//         return 1;
+//     }
+//     else {
+//         return grd(n-1, m) + grd(n, m-1)
+//     }
+// }
+
+// console.log(grd(2,2))
+// console.log(grd(3,3))
+
+// more factorial practice!
+// function factorial(n){
+//     if (n == 0){
+//         return 1;
+//     }
+//     else {
+//         return n * factorial(n-1);
+//     }
+// }
+
+// console.log(factorial(3))
+// 3 * factorial(3-1);
+// 2 * factorial(2-1);
+// 1 * factorial(1-1);
+
+// Fibonacci practice
+// function fib(n){
+//     if (n == 0 || n == 1){
+//         return 1;
+//     }
+//     else {
+//         return fib(n-1) + fib(n-2);
+//     }
+// }
+
+// console.log(fib(6))
+
+// **** Key note to remember.  fib(n-1) or any function with (n-1) re-assigns n to a constant.
+// **** for example function(n-2)+1, function(4)==> function(4-2)+1, so n == 3
+// Would expect:
+// fib(3)=
+// 3-1 + 3-2
+// 2 + 1 = 3
+// fib(5)=
+// 5-1 + 5-2
+// 4+3 
+
 // Zibonacci sequence
 // This function borrows ideas from the Fibonacci series, but the calculated results appear to zig and zag, hence the name. A so-called 'Zibonacci' series would be defined by the following rules:
 
@@ -128,28 +195,22 @@
 // Zib(2n) == Zib(n) + Zib(n+1)+1, if n>1 (i.e. even values 4 and higher).
 // Create the Zibonacci(num) function.
 
-// function zib(num){
-//     if( num <=1 ){
-//         return num;
-//     }
-//     else{
-//         return zib(2n+1) + zib(n-1)+1
-//     }
-// }
-
-// more practice!!
-function sum(n){
-    if (n == 0){
+function zib(num){
+    if( num == 1 || num == 0){
         return 1;
     }
-    else {
-    } return n + sum(n-1);
+    if(num == 2) {
+        return 2;
+    }
+    else if (num % 2 == 0){
+        return zib(num) - 2 + zib(num-1);
+    }
+    else if (num % 3 == 0){
+        return zib(num) - 2 + zib(num-2);
+    }
 }
 
-console.log(sum(5))
-// 5 + sum(5-1)
-// 4 + sum(4-1)
-// 3 + sum(3-1)
-// 2 + sum(2-1)
-// 1 + sum(1-1)
-// total == 15
+console.log(zib(4))
+// zib(3) should be:
+// 3 + (3-1)+1;
+//  
