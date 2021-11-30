@@ -195,22 +195,58 @@
 // Zib(2n) == Zib(n) + Zib(n+1)+1, if n>1 (i.e. even values 4 and higher).
 // Create the Zibonacci(num) function.
 
-function zib(num){
-    if( num == 1 || num == 0){
-        return 1;
-    }
-    if(num == 2) {
-        return 2;
-    }
-    else if (num % 2 == 0){
-        return zib(num) - 2 + zib(num-1);
-    }
-    else if (num % 3 == 0){
-        return zib(num) - 2 + zib(num-2);
-    }
-}
+// function zib(num){
+//     if( num == 1 || num == 0){
+//         return 1;
+//     }
+//     if(num == 2) {
+//         return 2;
+//     }
+//     else if (num % 2 == 0){
+//         return zib(num) - 2 + zib(num-1);
+//     }
+//     else if (num % 3 == 0){
+//         return zib(num) - 2 + zib(num-2);
+//     }
+// }
 
-console.log(zib(4))
+// console.log(zib(4))
 // zib(3) should be:
 // 3 + (3-1)+1;
-//  
+
+
+
+//Solve Fizz Buzz
+// The FizzBuzz problem is a classic test given in coding interviews. The task is simple: Print integers 1 to N, but print “Fizz” if an integer is divisible by 3, “Buzz” if an integer is divisible by 5, and “FizzBuzz” if an integer is divisible by both 3 and 5.
+// function fizz(n){
+//     for(var i = 0; n; i++){
+//         console.log(i);
+//         if(i % 3 == 0){
+//             console.log(i + 'Buzz')
+//         }
+//         if(i % 5 == 0){
+//             console.log(i + 'Fizz')
+//         }
+//         if(i % 3 == 0 && i % 5 ==0){
+//             console.log('fizzbuzz')
+//         }
+//     } return ;
+// }
+
+// fizz(10)
+
+// arr = [1,3,5];
+// sum = arr[0] + arr.length
+// console.log(sum)
+
+// Create a function that prints/logs all the even numbers from 4 to 22.
+// Have it also return the sum of all the numbers that were printed.
+sum = 0
+for (var i = 4; i <= 22+1; i++){
+    if (i % 2 ==0){
+        var sum = i + sum
+        console.log(i)
+        
+    }    
+}
+console.log(sum)

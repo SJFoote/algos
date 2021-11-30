@@ -138,22 +138,53 @@
 
 // **Problem Solving Patterns** \\
 // **FREQUENCY COUNTER** \\
-function freq(arr1, arr2) {
-    var count = 0
-    if (arr1.length !== arr2.length) {
-        return false
-    }
+// function freq(arr1, arr2) {
+//     var count = 0
+//     if (arr1.length !== arr2.length) {
+//         return false
+//     }
 
-    for (var i = 0; i < arr1.length; i++) {
-        let num = arr2.indexOf(arr1[i]**2)
-        console.log(arr2)
-        if (num == -1) {
-            return false;
-        }
-        console.log(arr2)
-        arr2.splice(num, 1)
+//     for (var i = 0; i < arr1.length; i++) {
+//         let num = arr2.indexOf(arr1[i]**2)
+//         console.log(arr2)
+//         if (num == -1) {
+//             return false;
+//         }
+//         console.log(arr2)
+//         arr2.splice(num, 1)
+//     }
+//     return true;
+// }
+
+// console.log(freq([1,2,3],[1,4,9]))
+
+// function same(arr1, arr2) {
+//     if(arr1.length !== arr2.length) {
+//         return false;
+//     }
+//     for(let i = 1; i<arr1.length; i++) {
+//         let correctIndex = arr2.indexOf(arr1[i] ** 2)
+//         if (correctIndex === -1) {
+//             return false;
+            
+//         }
+//         arr2.splice(correctIndex, 1);
+//         console.log(arr2);
+//     }
+//     return true;
+// }
+
+// console.log(same([1,2,3,1],[1,4,9,2]))
+
+// same refactored to remove nested loops
+
+function same(arr1, arr2) {
+    if(arr1.length !== arr2.length) {
+        return false;
     }
-    return true;
+    let freqCount1 = {};
+    let freqCount2 = {};
+    for (let i = 0; i < arr1.length; i++){
+        
+    }
 }
-
-console.log(freq([1,2,3],[1,4,9]))
